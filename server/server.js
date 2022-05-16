@@ -4,15 +4,18 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const db = require('./config/connection');
 // const routes = require('./routes');
-
 const { typeDefs, resolvers } = require('./schemas');
+// import jwt middleware
+const { authMiddleware } = require('./utils/auth');
+
 
 const PORT = process.env.PORT || 3001;
-// configure express with apollo
+// configure express with apollo - implement auth middleware
 const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware
 });
 
 app.use(express.urlencoded({ extended: true }));
