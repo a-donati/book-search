@@ -28,6 +28,7 @@ module.exports = {
       console.log('Invalid token');
   
     }
+    return req;
 
     // send to next endpoint
     // next();
