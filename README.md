@@ -26,7 +26,7 @@ This project is an application that allows users to search for books using the G
 
 Book Search homepage displays a search bar where the user types in their desired search terms. In order to save books to their list, the user must create an account and be signed in. To save a book, click `Save this book`. User can view and remove books from their saved list by navigating to the `See Your Books` page using the nav bar in the upper right corner of the screen.
 
-* [Click here for deployed application on Heroku]()
+* [Click here for deployed application on Heroku](https://fierce-mountain-77913.herokuapp.com/)
 
 ![Book Search Engine site displaying four book search results for 'Lisa Frank'](./assets/book-search-1.png)
 
