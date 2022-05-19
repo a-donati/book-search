@@ -1,4 +1,5 @@
 import React from 'react';
+// import apollo/client
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
@@ -20,7 +21,7 @@ const authLink = setContext((_, { headers }) => {
     }
   }
 });
-
+// set new apolloClient
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
@@ -34,8 +35,8 @@ function App() {
         <>
           <Navbar />
           <Routes>
-            <Route exact path='/' element={<SearchBooks/>} />
-            <Route exact path='/saved' element={<SavedBooks/>} />
+            <Route exact path='/' element={<SearchBooks />} />
+            <Route exact path='/saved' element={<SavedBooks />} />
             <Route render={() => <h2>Wrong Page!</h2>} />
           </Routes>
         </>
